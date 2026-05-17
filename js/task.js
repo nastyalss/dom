@@ -1,6 +1,6 @@
 // 1
 const p = document.querySelector(".test-text");
-p.textContent = "Привет, мир! Меня зовут Настя"
+p.innerHTML = "Привет, <b>мир</b>! Меня зовут <i>Настя</i>"
 console.log(p);
 p.style.background = "lightblue";
 p.style.color = "blue";
@@ -28,5 +28,13 @@ link.classList.add("red")
 container.after(link);
 
 // 4
+const startBtn = document.getElementById('btn1');
+const balloon = document.querySelector('.balloon');
+
+startBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    balloon.classList.add('up');
+});
+
 
 
